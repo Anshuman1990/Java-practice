@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import nu.pattern.OpenCV;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
@@ -27,7 +28,7 @@ public class Main {
 
 
 public static void main(String[] args) throws IOException {
-	System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+	OpenCV.loadShared();
 //	String dir = System.getProperty("user.dir")+"\\Dataset";
 //	Files.list(Paths.get(dir)).forEach(new Consumer<Path>() {
 //
