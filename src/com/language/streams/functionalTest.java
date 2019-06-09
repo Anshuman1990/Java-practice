@@ -1,7 +1,9 @@
 package com.language.streams;
 
-@FunctionalInterface
+//@FunctionalInterface
 public interface functionalTest {
 
-    public abstract String test();
+      String lambda(String t);
+
+
 }
