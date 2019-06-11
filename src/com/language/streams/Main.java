@@ -13,9 +13,6 @@ public class Main {
 
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7);
 
-        AtomicInteger index = new AtomicInteger();
-
-
         List listCombination =  (list
                 .stream()
                 .flatMap(integer -> list.stream().filter(integer1 -> integer == integer1 ? false:true).map(integer1 -> integer+"-"+integer1))
