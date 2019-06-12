@@ -91,6 +91,8 @@ public static void main(String[] args) {
 
 	String str = WorkFlowReference.valueOf("wf_1").getWorkFlowName();
 	System.out.println(">>>>>>>>>"+str);
+
+	String s = new String("qwerty");
 }
 
 private static String dateCheck(String date,String dateformat){
