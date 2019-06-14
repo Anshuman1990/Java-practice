@@ -1,4 +1,4 @@
-package com.design.Creational.Prototype;
+package com.designPattern.Creational.Prototype;
 
 public class Client {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.design.Creational.Prototype;
+package com.designPattern.Creational.Prototype;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
         LambdaTest test = new LambdaTest();
         test.test(t -> "HOLLA");
 
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7);
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,85,78);
 
         List listCombination =  (list
                 .stream()
@@ -22,5 +23,15 @@ public class Main {
                 .collect(Collectors.toList());
 
         System.out.println(listCombination);
+
+        Main.peek(list);
+    }
+
+
+    public static void peek(List<Integer> list){
+        System.out.println("--------------------------------------PEEK---------------------------------------------");
+        Consumer<Integer> consumer = integer -> System.out.println(integer*10);
+
+        list.stream().peek(consumer).count();
     }
 }

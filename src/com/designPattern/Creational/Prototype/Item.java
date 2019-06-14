@@ -1,4 +1,4 @@
-package com.design.Creational.Prototype;
+package com.designPattern.Creational.Prototype;
 
 public abstract class Item implements Cloneable{
 	private String title;

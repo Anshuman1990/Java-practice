@@ -1,3 +1,5 @@
+package com.hackerrank.algorithms;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

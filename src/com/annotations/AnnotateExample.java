@@ -1,5 +1,4 @@
-import com.annotations.AnnotationsManager;
-import com.annotations.JDBCConnection;
+package com.annotations;
 
 /**
  * 

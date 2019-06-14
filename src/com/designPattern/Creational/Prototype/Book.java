@@ -1,4 +1,4 @@
-package com.design.Creational.Prototype;
+package com.designPattern.Creational.Prototype;
 
 public class Book extends Item{
 	private String title;

@@ -1,4 +1,4 @@
-package com.design.Creational.Builder;
+package com.designPattern.Creational.Builder;
 
 public class Meal {
 	private String drink;

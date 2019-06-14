@@ -1,4 +1,4 @@
-package com.collections.list;
+package com.language.collections.list;
 
 import java.util.*;
 import java.util.function.Consumer;

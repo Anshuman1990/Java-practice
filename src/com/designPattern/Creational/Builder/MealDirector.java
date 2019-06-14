@@ -1,4 +1,4 @@
-package com.design.Creational.Builder;
+package com.designPattern.Creational.Builder;
 
 public class MealDirector {
 public Meal	createMeal(MealBuilder builder){

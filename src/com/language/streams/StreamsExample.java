@@ -1,4 +1,4 @@
-package com.language;
+package com.language.streams;
 
 import java.io.IOException;
 import java.nio.file.Files;
