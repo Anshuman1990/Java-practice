@@ -8,10 +8,11 @@ import java.util.Scanner;
 
 public class CountingValleys {
     private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) throws IOException {
         String path = System.getProperty("user.dir");
-        path = path+ File.separator+"hackerrank"+File.separator+"result";
-        System.setProperty("OUTPUT_PATH",path);
+        path = path + File.separator + "hackerrank" + File.separator + "result";
+        System.setProperty("OUTPUT_PATH", path);
 
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("OUTPUT_PATH")));
 
@@ -32,45 +33,31 @@ public class CountingValleys {
 
     // Complete the countingValleys function below.
     static int countingValleys(int n, String s) {
-        int totalMountain = 0;
         int totalValley = 0;
-
         int D_count = 0;
-        int C_count = 0;
-        boolean isMountain = false;
-        boolean isValley = false;
-    for(int i=0;i<n;i++){
-        String ch = s.valueOf(i);
+        int U_count = 0;
+        for (int i = 0; i < n; i++) {
+            String ch = String.valueOf(s.charAt(i));
 
-        if(D_count == C_count && D_count != 0 && C_count != 0) {
-            D_count = 0;
-            C_count = 0;
-            isMountain = false;
-            isValley = false;
-            switch (ch.toUpperCase()) {
-                case "U":
-                    isMountain = true;
-                    ++C_count;
-                    break;
+                switch (ch.toUpperCase()) {
+                    case "U":
+                        ++U_count;
+                        break;
 
-                case "D":
-                    isValley = true;
-                    ++D_count;
-                    break;
+                    case "D":
+                        ++D_count;
+                        break;
+            }
+            if (D_count == U_count && D_count != 0 && U_count != 0) {
+                D_count = 0;
+                U_count = 0;
+                switch (ch.toUpperCase()) {
+                    case "U":
+                        ++totalValley;
+                        break;
+                }
             }
         }
-        else{
-            switch (ch.toUpperCase()) {
-                case "U":
-                    ++C_count;
-                    break;
-
-                case "D":
-                    ++D_count;
-                    break;
-            }
-        }
-    }
-return 0;
+        return totalValley;
     }
 }
