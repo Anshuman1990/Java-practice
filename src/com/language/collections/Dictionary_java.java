@@ -1,4 +1,4 @@
-package com.language;
+package com.language.collections;
 
 import java.util.Dictionary;
 import java.util.Enumeration;
