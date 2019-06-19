@@ -6,11 +6,7 @@ import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
-public class MyList<E> extends AbstractList<E> implements  List<E>{
-    public static void main(String[] args) {
-        System.out.println("Test");
-
-    }
+public class MyList<E> extends AbstractList<E>{
 
 
     @Override
@@ -61,5 +57,10 @@ public class MyList<E> extends AbstractList<E> implements  List<E>{
     @Override
     public boolean add(E e) {
         return super.add(e);
+    }
+
+    @Override
+    public void add(int index, E element) {
+        super.add(index, element);
     }
 }
