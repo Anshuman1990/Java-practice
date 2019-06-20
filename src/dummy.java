@@ -89,10 +89,19 @@ public static void main(String[] args) {
 //	List<String> arr = Arrays.asList("qwerty","asdfgh","zxcvbn");
 //	System.out.println(arr.toString().contains("qwerty"));
 
-	String str = WorkFlowReference.valueOf("wf_1").getWorkFlowName();
-	System.out.println(">>>>>>>>>"+str);
-
-	String s = new String("qwerty");
+//	String str = WorkFlowReference.valueOf("wf_1").getWorkFlowName();
+//	System.out.println(">>>>>>>>>"+str);
+//
+//	String s = new String("qwerty");
+String s = "i am, not good, to work";
+s.split(",");
+s.split("");
+	System.out.println(s);
+	class abc{
+		abc(){
+			System.out.println("asdasd");
+		}
+	}
 }
 
 private static String dateCheck(String date,String dateformat){
