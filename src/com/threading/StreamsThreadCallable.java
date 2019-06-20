@@ -13,19 +13,16 @@ public StreamsThreadCallable(String filepath) {
 	this.filePath = filepath;
 }
 	@Override
-	public Object call() throws Exception {
+	public Object call() {
+		System.out.println("%%%%%%%%%%%%%%%CALLABLE%%%%%%%%%%%%%%%%%");
 		fileRead(this.filePath);
 		return "Done";
 	}
 
 	public void fileRead(String file_name) {
 		try (Stream<String> stream = Files.lines(Paths.get(file_name))) {
-			stream.forEach(new Consumer<String>() {
-				@Override
-				public void accept(String t) {
-					System.out.println("$$$$"+t);
-					
-				}
+			stream.forEach(s -> {
+				System.out.println(s);
 			});
 			 
 

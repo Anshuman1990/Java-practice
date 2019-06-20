@@ -31,5 +31,11 @@ public class datePrac {
 
 		Collections.sort(arr,c1);
 		System.out.println(arr);
+
+
+	}
+
+	public void inite(){
+
 	}
 }

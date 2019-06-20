@@ -13,18 +13,14 @@ private String filePath = "";
 	}
 	@Override
 	public void run() {
-		System.out.println("%%%%%%"+this.filePath);
+		System.out.println("%%%%%%%%%%%%%%%RUNNABLE%%%%%%%%%%%%%%%%%");
 	fileRead(this.filePath);
 	}
 
 	public void fileRead(String file_name) {
 		try (Stream<String> stream = Files.lines(Paths.get(file_name))) {
-			stream.forEach(new Consumer<String>() {
-				@Override
-				public void accept(String t) {
-					System.out.println("$$$$"+t);
-					
-				}
+			stream.forEach(s -> {
+				System.out.println(s);
 			});
 			 
 

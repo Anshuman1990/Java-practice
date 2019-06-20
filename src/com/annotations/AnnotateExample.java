@@ -8,7 +8,7 @@ package com.annotations;
  * @author asaha
  *
  */
-@JDBCConnection(DbName = "",DbPass="",DbUname="")
+
 public class AnnotateExample {
 
 	public void mymethod(){
