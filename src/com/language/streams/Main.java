@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,6 +26,22 @@ public class Main {
         System.out.println(listCombination);
 
         Main.peek(list);
+
+        // Create ArrayList containing names
+        ArrayList<String> lists = new ArrayList<String>();
+        lists.add("Aman");
+        lists.add("Zufaq");
+        lists.add("Suraj");
+
+        // create a stream with ArrayList
+        Stream<ArrayList<String> > value
+                = Stream.of(lists);
+
+        // print values
+        System.out.println("Values of Stream:");
+        value.forEach(System.out::println);
+
+
     }
 
 
