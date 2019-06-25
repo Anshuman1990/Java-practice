@@ -4,8 +4,7 @@ import java.util.concurrent.CountDownLatch;
 
 public class CountDownLatchDemo {
     public static void main(String args[])
-            throws InterruptedException
-    {
+            throws InterruptedException {
         // Let us create task that is going to
         // wait for four threads before it starts
         CountDownLatch latch = new CountDownLatch(4);
@@ -36,31 +35,25 @@ public class CountDownLatchDemo {
 
 // A class to represent threads for which
 // the main thread waits.
-class Worker extends Thread
-{
+class Worker extends Thread {
     private int delay;
     private CountDownLatch latch;
 
     public Worker(int delay, CountDownLatch latch,
-                  String name)
-    {
+                  String name) {
         super(name);
         this.delay = delay;
         this.latch = latch;
     }
 
     @Override
-    public void run()
-    {
-        try
-        {
+    public void run() {
+        try {
             Thread.sleep(delay);
             latch.countDown();
             System.out.println(Thread.currentThread().getName()
                     + " finished");
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

@@ -1,9 +1,8 @@
-package com.threading;
+package com.language.threading;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class StreamsThreadRunnable implements Runnable{
