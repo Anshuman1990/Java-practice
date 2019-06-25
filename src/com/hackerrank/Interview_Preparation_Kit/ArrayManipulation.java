@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.*;
 
 public class ArrayManipulation {
 
@@ -14,25 +14,29 @@ public class ArrayManipulation {
     // Complete the arrayManipulation function below.
     static long arrayManipulation(int n, int[][] queries) {
         long maxValue = 0;
-        long[] arr = new long[n];
+
+        Map<Integer, Long> data = new TreeMap<>();
+
         for (int i = 0; i < n; i++) {
-            arr[i] = 0;
+            data.put(i, 0L);
         }
         for (int i = 0; i < queries.length; i++) {
             int startIndex = queries[i][0];
             int endIndex = queries[i][1];
             long value = queries[i][2];
             for (int j = startIndex-1; j < endIndex; j++) {
-                arr[j] = arr[j] + value;
+            long val = data.get(j);
+            val = val+value;
+            data.put(j,val);
             }
         }
-        for (int i = 0; i < n; i++) {
-            if(arr[i]>maxValue)
-                maxValue = arr[i];
-        }
+
+        System.out.println(data);
 
         return maxValue;
     }
+
+
 
     public static void main(String[] args) throws IOException {
         String path = System.getProperty("user.dir");
