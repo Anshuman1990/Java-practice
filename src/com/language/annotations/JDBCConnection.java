@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.language.annotations;
 
@@ -15,8 +15,9 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface JDBCConnection {
-public String DbName();
-public String DbUname();
-public String DbPass();
+    String DatabaseName();
 
+    String DatabaseUserName();
+
+    String DatabasePassword();
 }
