@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class Main {
+	static String hello = "Hello";
 public static void main(String[] args) throws IOException {
 	Main main = new Main();
 
@@ -29,17 +30,31 @@ public static void main(String[] args) throws IOException {
 //	System.out.println(D1);
 	//read file into stream, try-with-resources
 
-Integer i = new Integer(5);
-	Integer j = new Integer(10);
-	swap(i,j);
-	System.out.println("i= "+i+" j= "+j);
+//Integer i = new Integer(5);
+//	Integer j = new Integer(10);
+//	swap(i,j);
+//	System.out.println("i= "+i+" j= "+j);
+//
+//	try{
+//		main.divide();
+//	}catch (Exception e){
+//		e.fillInStackTrace();
+//		e.printStackTrace();
+//	}
 
-	try{
-		main.divide();
-	}catch (Exception e){
-		e.fillInStackTrace();
-		e.printStackTrace();
-	}
+
+	String hello = "Hello", lo = "lo";
+
+	System.out.print((hello == "Hello") + " ");//true
+	System.out.print((LambdaExp.hello == hello) + " ");//false
+	System.out.print((hello == ("Hel"+"lo")) + " ");//false
+	System.out.print((hello == ("Hel"+lo)) + " ");//false
+	System.out.println(hello == ("Hel"+lo).intern());
+
+	String str = new String("Hello");
+	String str1 = new String("Hello");
+
+	System.out.println(str == str1);
 }
 
 private static void readFile(String fname, List<String> list){
