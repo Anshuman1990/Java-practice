@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.annotations;
+package com.language.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
