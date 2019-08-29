@@ -1,4 +1,4 @@
-package com.language.streams;
+package com.language.lambda;
 
 import java.util.Spliterator;
 import java.util.function.Consumer;

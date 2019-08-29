@@ -23,19 +23,31 @@ public class AnnotateExample {
         arr.forEach(annotationMap -> {
             JDBCConnection annotation = (JDBCConnection) annotationMap.get("annotation");
             Method method = (Method) annotationMap.get("method");
+            int parameterCount = method.getParameterCount();
             String DBName = annotation.DatabaseName();
             switch (DBName.toUpperCase()) {
                 case "MYSQL":
+                case "SQL SERVER":
                     try {
-                        Object value = method.invoke(demoObject);
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();
-                    } catch (InvocationTargetException e) {
+                        invoke(method, demoObject);
+                    } catch (InvocationTargetException | IllegalAccessException e) {
                         e.printStackTrace();
                     }
                     break;
             }
         });
 
+    }
+
+    private static Object invoke(Method method, Object methodObject) throws InvocationTargetException, IllegalAccessException {
+        Object response = null;
+        int parameterCount = method.getParameterCount();
+        if (parameterCount == 0) {
+            response = method.invoke(methodObject);
+        } else {
+            Class[] parameterType = method.getParameterTypes();
+
+        }
+        return response;
     }
 }

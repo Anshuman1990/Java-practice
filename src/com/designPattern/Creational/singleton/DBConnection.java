@@ -4,25 +4,32 @@ import java.io.Serializable;
 
 public class DBConnection implements Serializable,Cloneable {
 
-    private String name;
 
-    private static DBConnection DB_CONNECTION = null;
-
-    private DBConnection(String name){
-        this.name = name;
+    private static volatile DBConnection DB_CONNECTION ;
+    private DBConnection()
+    {
+        // private constructor
     }
 
-    public String getName(){
-        return this.name;
-    }
-
-    public static DBConnection createInstance(String name){
-        return (DB_CONNECTION == null ? DB_CONNECTION = new DBConnection(name):DB_CONNECTION);
+    public static DBConnection getInstance()
+    {
+        if (DB_CONNECTION == null)
+        {
+            // To make thread safe
+            synchronized (DBConnection.class)
+            {
+                // check again as multiple threads
+                // can reach above step
+                if (DB_CONNECTION==null)
+                    DB_CONNECTION = new DBConnection();
+            }
+        }
+        return DB_CONNECTION;
     }
 
     protected Object readResolve()
     {
-        return DB_CONNECTION;
+        return getInstance();
     }
 
     @Override

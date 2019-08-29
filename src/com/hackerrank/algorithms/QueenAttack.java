@@ -16,10 +16,12 @@ public class QueenAttack {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int n = 5;
-		int k = 3;
-		int rQueen = 4;
-		int cQueen = 3;
+		int n = in.nextInt();
+		int k = in.nextInt();
+		int rQueen = in.nextInt();
+		int cQueen = in.nextInt();
+		System.out.println(n+","+k);
+		System.out.println(rQueen+","+cQueen);
 		ArrayList<int[]> Obstacle = new ArrayList<int[]>(k);
 		for (int i = 0; i < k; i++) {
 			int rObstacle = in.nextInt();

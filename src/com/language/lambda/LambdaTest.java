@@ -1,4 +1,4 @@
-package com.language.streams;
+package com.language.lambda;
 
 public class LambdaTest implements DefaultInterface {
 

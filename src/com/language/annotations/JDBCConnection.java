@@ -1,6 +1,4 @@
-/**
- *
- */
+
 package com.language.annotations;
 
 import java.lang.annotation.ElementType;

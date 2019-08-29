@@ -93,15 +93,20 @@ public static void main(String[] args) {
 //	System.out.println(">>>>>>>>>"+str);
 //
 //	String s = new String("qwerty");
-String s = "i am, not good, to work";
-s.split(",");
-s.split("");
-	System.out.println(s);
-	class abc{
-		abc(){
-			System.out.println("asdasd");
-		}
-	}
+//String s = "i am, not good, to work";
+//s.split(",");
+//s.split("");
+//	System.out.println(s);
+//	class abc{
+//		abc(){
+//			System.out.println("asdasd");
+//		}
+//	}
+
+	System.out.println("abc".length());
+	System.out.println("abc".substring(0,3));
+
+	System.out.println(isPalindrone("12321"));
 }
 
 private static String dateCheck(String date,String dateformat){
@@ -191,6 +196,20 @@ public void check(Object type) {
 		WorkFlowReference(String _workflowname){
 			this.workFlowName = _workflowname;
 		}
+	}
+
+	public static boolean isPalindrone(String str){
+	int len = str.length()-1;
+	int count = 0;
+	for(int i=0;i<str.length();i++){
+		char ch1 = str.charAt(i);
+		char ch2 = str.charAt(len-i);
+		if(ch1 == ch2)
+			count++;
+	}
+	if(count == str.length())
+		return true;
+	return false;
 	}
 }
 

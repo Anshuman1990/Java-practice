@@ -3,7 +3,7 @@ package com.language.annotations;
 public class Demo {
 
     @JDBCConnection(DatabaseName = "SQL Server", DatabaseUserName = "root", DatabasePassword = "root")
-    public String test1() {
+    public String test1(String name,int val) {
         System.out.println("TEST1");
         return "TEST1";
     }
