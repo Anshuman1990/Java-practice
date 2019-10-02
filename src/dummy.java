@@ -1,9 +1,7 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -199,17 +197,17 @@ public void check(Object type) {
 	}
 
 	public static boolean isPalindrone(String str){
-	int len = str.length()-1;
-	int count = 0;
-	for(int i=0;i<str.length();i++){
-		char ch1 = str.charAt(i);
-		char ch2 = str.charAt(len-i);
-		if(ch1 == ch2)
-			count++;
-	}
-	if(count == str.length())
-		return true;
-	return false;
-	}
+        int[] arr = new int[2];
+        arr[0] = 2;
+        int len = str.length() - 1;
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char ch1 = str.charAt(i);
+            char ch2 = str.charAt(len - i);
+            if (ch1 == ch2)
+                count++;
+        }
+        return count == str.length();
+    }
 }
 
