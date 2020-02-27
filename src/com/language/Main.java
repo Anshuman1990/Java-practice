@@ -1,12 +1,8 @@
 package com.language;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -41,7 +37,7 @@ public static void main(String[] args) throws IOException {
 //		e.fillInStackTrace();
 //		e.printStackTrace();
 //	}
-
+		System.out.println("https://blog.feedspot.com/relationship_blogs/".contains("relationship"));
 
 	String hello = "Hello", lo = "lo";
 

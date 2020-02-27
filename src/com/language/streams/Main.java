@@ -1,7 +1,5 @@
 package com.language.streams;
 
-import com.language.LambdaExp;
-import com.language.lambda.lambdaTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,15 +11,12 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        lambdaTest test  = () -> {
 
-        };
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 85, 78);
 
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,85,78);
-
-        List listCombination =  (list
+        List listCombination = (list
                 .stream()
-                .flatMap(integer -> list.stream().filter(integer1 -> !integer.equals(integer1)).map(integer1 -> integer+"-"+integer1))
+                .flatMap(integer -> list.stream().filter(integer1 -> !integer.equals(integer1)).map(integer1 -> integer + "-" + integer1))
                 .collect(Collectors.toList()))
                 .stream()
                 .filter(data -> Integer.parseInt(data.split("-")[0]) + Integer.parseInt(data.split("-")[1]) == 10)
@@ -38,27 +33,27 @@ public class Main {
         lists.add("Suraj");
 
         // create a stream with ArrayList
-        Stream<ArrayList<String> > value
+        Stream<ArrayList<String>> value
                 = Stream.of(lists);
 
         // print values
         System.out.println("Values of Stream:");
         value.forEach(System.out::println);
-    //reduce
+        //reduce
         Optional<Integer> val = list.stream()
-                .filter(x->x%2==0)
-                .reduce((x,y)->{
-                    System.out.println("x= "+x);
-                    System.out.println("y="+y);
-                    return x+y;
+                .filter(x -> x % 2 == 0)
+                .reduce((x, y) -> {
+                    System.out.println("x= " + x);
+                    System.out.println("y=" + y);
+                    return x + y;
                 });
-        System.out.println("%%%%%%%%%"+val.get());
+        System.out.println("%%%%%%%%%" + val.get());
     }
 
 
-    public static void peek(List<Integer> list){
+    public static void peek(List<Integer> list) {
         System.out.println("--------------------------------------PEEK---------------------------------------------");
-        Consumer<Integer> consumer = integer -> System.out.println(integer*10);
+        Consumer<Integer> consumer = integer -> System.out.println(integer * 10);
 
         list.stream().peek(consumer).count();
     }

@@ -1,4 +1,4 @@
-package com.neo4j;
+package com.database.neo4j;
 
 import org.neo4j.driver.v1.*;
 
@@ -14,8 +14,7 @@ public class HelloWorldExample implements AutoCloseable
     }
 
     @Override
-    public void close() throws Exception
-    {
+    public void close() {
         driver.close();
     }
 

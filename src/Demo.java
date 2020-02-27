@@ -1,8 +1,3 @@
-import java.io.ByteArrayInputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Demo {
 public static void main(String[] args) {
 //	String str = "html,br,<br>,";
