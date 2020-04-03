@@ -109,109 +109,98 @@
 	<dependencies>
 		<!-- ND4J backend. You need one in every DL4J project. Normally define 
 			artifactId as either "nd4j-native-platform" or "nd4j-cuda-7.5-platform" -->
-		<dependency>
-			<groupId>org.nd4j</groupId>
-			<artifactId>${nd4j.backend}</artifactId>
-			<version>${nd4j.version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.nd4j</groupId>-->
+<!--			<artifactId>${nd4j.backend}</artifactId>-->
+<!--			<version>${nd4j.version}</version>-->
+<!--		</dependency>-->
 
-		<!-- Core DL4J functionality -->
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-core</artifactId>
-			<version>${dl4j.version}</version>
-		</dependency>
+<!--		&lt;!&ndash; Core DL4J functionality &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.deeplearning4j</groupId>-->
+<!--			<artifactId>deeplearning4j-core</artifactId>-->
+<!--			<version>${dl4j.version}</version>-->
+<!--		</dependency>-->
 
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-nlp</artifactId>
-			<version>${dl4j.version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.deeplearning4j</groupId>-->
+<!--			<artifactId>deeplearning4j-nlp</artifactId>-->
+<!--			<version>${dl4j.version}</version>-->
+<!--		</dependency>-->
 
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-zoo</artifactId>
-			<version>${dl4j.version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.deeplearning4j</groupId>-->
+<!--			<artifactId>deeplearning4j-zoo</artifactId>-->
+<!--			<version>${dl4j.version}</version>-->
+<!--		</dependency>-->
 
-		<!-- deeplearning4j-ui is used for visualization: see http://deeplearning4j.org/visualization -->
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-ui_${scala.binary.version}</artifactId>
-			<version>${dl4j.version}</version>
-		</dependency>
+<!--		&lt;!&ndash; deeplearning4j-ui is used for visualization: see http://deeplearning4j.org/visualization &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.deeplearning4j</groupId>-->
+<!--			<artifactId>deeplearning4j-ui_${scala.binary.version}</artifactId>-->
+<!--			<version>${dl4j.version}</version>-->
+<!--		</dependency>-->
 
-		<!-- ParallelWrapper & ParallelInference live here -->
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>deeplearning4j-parallel-wrapper_${scala.binary.version}</artifactId>
-			<version>${dl4j.version}</version>
-		</dependency>
-
-		<!-- Next 2: used for MapFileConversion Example. Note you need *both* together -->
-		<dependency>
-			<groupId>org.datavec</groupId>
-			<artifactId>datavec-hadoop</artifactId>
-			<version>${datavec.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-common</artifactId>
-			<version>${hadoop.version}</version>
-		</dependency>
+<!--		&lt;!&ndash; ParallelWrapper & ParallelInference live here &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.deeplearning4j</groupId>-->
+<!--			<artifactId>deeplearning4j-parallel-wrapper_${scala.binary.version}</artifactId>-->
+<!--			<version>${dl4j.version}</version>-->
+<!--		</dependency>-->
 
 
-		<!-- Arbiter - used for hyperparameter optimization (grid/random search) -->
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>arbiter-deeplearning4j</artifactId>
-			<version>${arbiter.version}</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.deeplearning4j</groupId>
-			<artifactId>arbiter-ui_2.11</artifactId>
-			<version>${arbiter.version}</version>
-		</dependency>
+<!--		&lt;!&ndash; Arbiter - used for hyperparameter optimization (grid/random search) &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.deeplearning4j</groupId>-->
+<!--			<artifactId>arbiter-deeplearning4j</artifactId>-->
+<!--			<version>${arbiter.version}</version>-->
+<!--		</dependency>-->
 
-		<!-- datavec-data-codec: used only in video example for loading video data -->
-		<dependency>
-			<artifactId>datavec-data-codec</artifactId>
-			<groupId>org.datavec</groupId>
-			<version>${datavec.version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.deeplearning4j</groupId>-->
+<!--			<artifactId>arbiter-ui_2.11</artifactId>-->
+<!--			<version>${arbiter.version}</version>-->
+<!--		</dependency>-->
 
-		<!-- Used in the feedforward/classification/MLP* and feedforward/regression/RegressionMathFunctions 
-			example -->
-		<dependency>
-			<groupId>jfree</groupId>
-			<artifactId>jfreechart</artifactId>
-			<version>${jfreechart.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jfree</groupId>
-			<artifactId>jcommon</artifactId>
-			<version>${jcommon.version}</version>
-		</dependency>
+<!--		&lt;!&ndash; datavec-data-codec: used only in video example for loading video data &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<artifactId>datavec-data-codec</artifactId>-->
+<!--			<groupId>org.datavec</groupId>-->
+<!--			<version>${datavec.version}</version>-->
+<!--		</dependency>-->
 
-		<!-- Used for downloading data in some of the examples -->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.3.5</version>
-		</dependency>
+<!--		&lt;!&ndash; Used in the feedforward/classification/MLP* and feedforward/regression/RegressionMathFunctions -->
+<!--			example &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>jfree</groupId>-->
+<!--			<artifactId>jfreechart</artifactId>-->
+<!--			<version>${jfreechart.version}</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.jfree</groupId>-->
+<!--			<artifactId>jcommon</artifactId>-->
+<!--			<version>${jcommon.version}</version>-->
+<!--		</dependency>-->
 
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.googlecode.htmlcompressor/htmlcompressor -->
-		<dependency>
-			<groupId>com.googlecode.htmlcompressor</groupId>
-			<artifactId>htmlcompressor</artifactId>
-			<version>1.4</version>
-		</dependency>
+<!--		&lt;!&ndash; Used for downloading data in some of the examples &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.apache.httpcomponents</groupId>-->
+<!--			<artifactId>httpclient</artifactId>-->
+<!--			<version>4.3.5</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>ch.qos.logback</groupId>-->
+<!--			<artifactId>logback-classic</artifactId>-->
+<!--			<version>${logback.version}</version>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/com.googlecode.htmlcompressor/htmlcompressor &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>com.googlecode.htmlcompressor</groupId>-->
+<!--			<artifactId>htmlcompressor</artifactId>-->
+<!--			<version>1.4</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>com.opencsv</groupId>
@@ -219,28 +208,28 @@
 			<version>4.1</version>
 		</dependency>
 
-		<dependency>
-			<groupId>io.vertx</groupId>
-			<artifactId>vertx-core</artifactId>
-			<version>3.5.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.reactivestreams</groupId>
-			<artifactId>reactive-streams</artifactId>
-			<version>1.0.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.reactivestreams</groupId>
-			<artifactId>reactive-streams-tck</artifactId>
-			<version>1.0.2</version>
-			<scope>test</scope>
-		</dependency>
-        <dependency>
-            <groupId>edu.berkeley.compbio</groupId>
-            <artifactId>jlibsvm</artifactId>
-            <version>0.911</version>
-        </dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<!--		<dependency>-->
+<!--			<groupId>io.vertx</groupId>-->
+<!--			<artifactId>vertx-core</artifactId>-->
+<!--			<version>3.5.3</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.reactivestreams</groupId>-->
+<!--			<artifactId>reactive-streams</artifactId>-->
+<!--			<version>1.0.2</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.reactivestreams</groupId>-->
+<!--			<artifactId>reactive-streams-tck</artifactId>-->
+<!--			<version>1.0.2</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>edu.berkeley.compbio</groupId>-->
+<!--            <artifactId>jlibsvm</artifactId>-->
+<!--            <version>0.911</version>-->
+<!--        </dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.poi/poi &ndash;&gt;-->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -280,17 +269,23 @@
 			<version>4.0.7</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.9</version>
-		</dependency>
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.apache.commons</groupId>-->
+<!--			<artifactId>commons-lang3</artifactId>-->
+<!--			<version>3.9</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.neo4j.driver</groupId>
 			<artifactId>neo4j-java-driver</artifactId>
 			<version>1.7.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-bolt</artifactId>
+			<version>4.0.0</version>
 		</dependency>
 
 
@@ -313,6 +308,19 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.language.Main</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
