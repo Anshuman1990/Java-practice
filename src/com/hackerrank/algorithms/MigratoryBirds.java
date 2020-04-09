@@ -15,14 +15,7 @@ public class MigratoryBirds {
     }
 
     static int migratoryBirds(List<Integer> arr) {
-        int result = 0;
-        SortedMap<Integer, Integer> sortedMap = new TreeMap(new Comparator<Integer>() {
-
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o1.compareTo(o2);
-            }
-        });
+        Map<Integer, Integer> sortedMap = new HashMap<>();
         arr.forEach(integer -> {
             if (sortedMap.containsKey(integer)) {
                 int count = sortedMap.get(integer) + 1;
@@ -31,7 +24,7 @@ public class MigratoryBirds {
                 sortedMap.put(integer, 1);
             }
         });
-        System.out.println(sortedMap);
-        return result;
+        Map.Entry<Integer, Integer> entry = sortedMap.entrySet().stream().sorted((o1, o2) -> o2.getValue().compareTo(o1.getValue())).findFirst().get();
+        return entry.getKey();
     }
 }
