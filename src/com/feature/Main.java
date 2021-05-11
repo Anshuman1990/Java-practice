@@ -22,6 +22,9 @@ public class Main {
 				.map(map -> map.getKey()).collect(Collectors.joining(","));
 		
 		System.out.println(mcsisType);
+
+
+
 	}
 }
 

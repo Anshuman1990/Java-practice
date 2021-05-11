@@ -1,5 +1,8 @@
+import java.io.IOException;
+import java.nio.file.Files;
+
 public class Demo {
-public static void main(String[] args) {
+public static void main(String[] args) throws IOException {
 //	String str = "html,br,<br>,";
 //	System.out.println(formatString(str, ","));
 //
@@ -29,6 +32,8 @@ public static void main(String[] args) {
     else{
 		System.out.println("false");
 	}
+	System.out.println(Files.createTempDirectory("tmpDirPrefix").toFile().getAbsolutePath());
+	System.out.println(System.getProperty("java.io.tmpdir"));
 }
 
 private static String formatString(String text,String delimiter){
