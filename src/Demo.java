@@ -3,6 +3,8 @@ import java.nio.file.Files;
 
 public class Demo {
 public static void main(String[] args) throws IOException {
+	System.out.println("a".equals("a"));
+
 //	String str = "html,br,<br>,";
 //	System.out.println(formatString(str, ","));
 //

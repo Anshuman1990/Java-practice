@@ -1,8 +1,7 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 
@@ -105,6 +104,23 @@ public static void main(String[] args) {
 	System.out.println("abc".substring(0,3));
 
 	System.out.println(isPalindrone("12321"));
+
+	String a = "a b    c";
+	String b = "bac";
+	String a_sorted = sort(a);
+	String b_sorted = sort(b);
+	System.out.println(a_sorted.hashCode()+"--->"+b_sorted.hashCode());
+
+	Map<Integer, String> map = new HashMap<>();
+
+	int t = -322;
+	System.out.println((t*2)-t);
+
+}
+
+private static String sort(String str) {
+	str = str.replaceAll(" ","");
+	return Arrays.stream(str.split("")).sorted().collect(Collectors.joining());
 }
 
 private static String dateCheck(String date,String dateformat){

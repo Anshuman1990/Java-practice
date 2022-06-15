@@ -3,21 +3,30 @@ package com;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.text.DecimalFormat;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.IntConsumer;
 import java.util.stream.IntStream;
 
 public class Main {
 
+
+
     final public static char COMMA = ',';
     final public static String COMMA_STR = ",";
     final public static char ESCAPE_CHAR = '\\';
 
 	public static void main(String[] args) {
+        List<String> list = new ArrayList<>(Arrays.asList("A","B"));
+        DecimalFormat decimalFormat = new DecimalFormat("0.00000");
+        double scale = Math.pow(10, 5);
+        double value = (double)20/2;
+        String format = decimalFormat.format(value);
+        System.out.println(format);
+        System.out.println(Double.valueOf(format));
+        System.out.println(18%10+"---"+18/10);
+
 //		Map<String, String> attributes = new HashMap<String,String>();
 //		Map<Integer, String> attributes1 = new HashMap<Integer,String>();
 //		attributes.put("FNAME", "qwerty");
