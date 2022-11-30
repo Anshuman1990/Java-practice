@@ -1,4 +1,4 @@
-package com.language.threading;
+package com.language.threads;
 
 import java.util.LinkedList;
 

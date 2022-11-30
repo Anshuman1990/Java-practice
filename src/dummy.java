@@ -100,22 +100,31 @@ public static void main(String[] args) {
 //		}
 //	}
 
-	System.out.println("abc".length());
-	System.out.println("abc".substring(0,3));
+//	System.out.println("abc".length());
+//	System.out.println("abc".substring(0,3));
+//
+//	System.out.println(isPalindrone("12321"));
+//
+//	String a = "a b    c";
+//	String b = "bac";
+//	String a_sorted = sort(a);
+//	String b_sorted = sort(b);
+//	System.out.println(a_sorted.hashCode()+"--->"+b_sorted.hashCode());
+//
+//	Map<Integer, String> map = new HashMap<>();
+//
+//	int t = -322;
+//	System.out.println((t*2)-t);
 
-	System.out.println(isPalindrone("12321"));
-
-	String a = "a b    c";
-	String b = "bac";
-	String a_sorted = sort(a);
-	String b_sorted = sort(b);
-	System.out.println(a_sorted.hashCode()+"--->"+b_sorted.hashCode());
-
-	Map<Integer, String> map = new HashMap<>();
-
-	int t = -322;
-	System.out.println((t*2)-t);
-
+	String s = "Helloworld";
+	int[] countMap = new int[256];
+	for (char each: s.toCharArray()) {
+		countMap[each]++;
+	}
+	for (int i : countMap) {
+		if(i!=0)
+		System.out.println(i+"--"+countMap[i]);
+	}
 }
 
 private static String sort(String str) {

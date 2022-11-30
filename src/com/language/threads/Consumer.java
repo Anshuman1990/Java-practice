@@ -1,4 +1,4 @@
-package com.language.threading;
+package com.language.threads;
 
 public class Consumer extends Thread {
     private Producer producer;

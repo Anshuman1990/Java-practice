@@ -1,5 +1,8 @@
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Demo {
 public static void main(String[] args) throws IOException {
@@ -25,17 +28,24 @@ public static void main(String[] args) throws IOException {
 //    new ByteArrayInputStream(str.getBytes());
 
 
-    String str = "qwertyu";
-    String str1 = "qwertyu";
+//    String str = "qwertyu";
+//    String str1 = "qwertyu";
+//
+//    if(str == str1){
+//		System.out.println("true");
+//	}
+//    else{
+//		System.out.println("false");
+//	}
+//	System.out.println(Files.createTempDirectory("tmpDirPrefix").toFile().getAbsolutePath());
+//	System.out.println(System.getProperty("java.io.tmpdir"));
+	String s = null;
+	Optional<String> sOpt = Optional.ofNullable(s);
+	System.out.println(sOpt.isPresent());
 
-    if(str == str1){
-		System.out.println("true");
-	}
-    else{
-		System.out.println("false");
-	}
-	System.out.println(Files.createTempDirectory("tmpDirPrefix").toFile().getAbsolutePath());
-	System.out.println(System.getProperty("java.io.tmpdir"));
+	List<String> days = List.of("Monday","Tuesday","Saturday","Sunday");
+	List daysU = days.stream().filter(s1 -> s1.charAt(0) == 'S').map(s1 -> s1.toUpperCase()).collect(Collectors.toList());
+	System.out.println(daysU);
 }
 
 private static String formatString(String text,String delimiter){

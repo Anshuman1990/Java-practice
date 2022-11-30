@@ -12,7 +12,7 @@ public class StreamsExample {
 public static void main(String[] args) {
 	System.out.println(sum(Arrays.asList(11,2,13,4,15,6)));
 	StreamsExample stream = new StreamsExample();
-	stream.fileRead("D://Dataset//sentiment labelled sentences//imdb_labelled.txt");
+	stream.fileRead("C://dataset//test.txt");
 	
 	List<String> list = Arrays.asList("A","B","C");
 	list.forEach(name -> test(name));
@@ -31,8 +31,6 @@ public void fileRead(String file_name) {
 				
 			}
 		});
-		 
-
 	} catch (IOException e) {
 		e.printStackTrace();
 	}

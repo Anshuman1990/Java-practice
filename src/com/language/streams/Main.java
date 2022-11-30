@@ -1,10 +1,7 @@
 package com.language.streams;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -40,21 +37,187 @@ public class Main {
         System.out.println("Values of Stream:");
         value.forEach(System.out::println);
         //reduce
-        Optional<Integer> val = list.stream()
-                .filter(x -> x % 2 == 0)
-                .reduce((x, y) -> {
-                    System.out.println("x= " + x);
-                    System.out.println("y=" + y);
-                    return x + y;
-                });
-        System.out.println("%%%%%%%%%" + val.get());
+        Main.reduce(list);
+
+        Main.map();
     }
 
 
     public static void peek(List<Integer> list) {
         System.out.println("--------------------------------------PEEK---------------------------------------------");
+        System.out.println(list);
         Consumer<Integer> consumer = integer -> System.out.println(integer * 10);
 
-        list.stream().peek(consumer).count();
+        List<Integer> result = list.stream().peek(consumer).collect(Collectors.toList());
+        System.out.println(result);
+        List<String> resultString = Stream.of("one", "two", "three", "four")
+                .filter(e -> e.length() > 3)
+                .peek(e -> System.out.println("Filtered value: " + e))
+                .map(String::toUpperCase)
+                .peek(e -> System.out.println("Mapped value: " + e))
+                .collect(Collectors.toList());
+        System.out.println(resultString);
+        System.out.println("--------------------------------------PEEK---------------------------------------------");
+    }
+
+    public static void reduce(List<Integer> list) {
+        System.out.println("--------------------------------------REDUCE---------------------------------------------");
+        System.out.println(list);
+        Optional<Integer> val = list.stream()
+//                .filter(x -> x % 2 == 0)
+                .reduce((x, y) -> {
+                    System.out.println("x= " + x);
+                    System.out.println("y=" + y);
+                    return x + y;
+                });
+        System.out.println("Result:- " + val.get());
+        System.out.println("--------------------------------------REDUCE---------------------------------------------");
+    }
+
+    public static void map() {
+        System.out.println("--------------------------------------MAP---------------------------------------------");
+        List<RoomView> roomViewList = new ArrayList<>();
+        RoomView roomView11 = new RoomView(1,101,"D");
+        RoomView roomView12 = new RoomView(1,102,"D");
+        RoomView roomView13 = new RoomView(1,103,"D");
+        RoomView roomView14 = new RoomView(1,104,"D");
+        RoomView roomView15 = new RoomView(1,105,"D");
+
+        RoomView roomView21 = new RoomView(2,201,"D");
+        RoomView roomView22 = new RoomView(2,202,"D");
+        RoomView roomView23 = new RoomView(2,203,"D");
+        RoomView roomView24 = new RoomView(2,204,"D");
+        RoomView roomView25 = new RoomView(2,205,"D");
+
+        roomViewList.add(roomView11);
+        roomViewList.add(roomView12);
+        roomViewList.add(roomView13);
+        roomViewList.add(roomView14);
+        roomViewList.add(roomView15);
+        roomViewList.add(roomView21);
+        roomViewList.add(roomView22);
+        roomViewList.add(roomView23);
+        roomViewList.add(roomView24);
+        roomViewList.add(roomView25);
+        System.out.println(roomViewList);
+        List <Room> roomList = roomViewList.stream().map(RoomView::getFloorNumber).distinct().collect(Collectors.toList())
+                .stream().map(integer -> {
+            Room room = new Room();
+            room.setFloorNumber(integer);
+                    List<RoomDetails> roomDetailsList = roomViewList.stream().filter(roomView -> Objects.equals(roomView.getFloorNumber(), integer)).map(roomView -> {
+                        RoomDetails roomDetails = new RoomDetails();
+                        roomDetails.setRoomNumber(roomView.getRoomNumber());
+                        roomDetails.setRoomTypeName(roomView.getRoomTypeName());
+                        return roomDetails;
+                    }).collect(Collectors.toList());
+                    room.setRoomDetails(roomDetailsList);
+            return room;
+        }).collect(Collectors.toList());
+        System.out.println(roomList);
+
+        System.out.println("--------------------------------------MAP---------------------------------------------");
+    }
+}
+
+class Room{
+    private Integer floorNumber;
+    private List<RoomDetails> roomDetails;
+
+    public Integer getFloorNumber() {
+        return floorNumber;
+    }
+
+    public void setFloorNumber(Integer floorNumber) {
+        this.floorNumber = floorNumber;
+    }
+
+    public List<RoomDetails> getRoomDetails() {
+        return roomDetails;
+    }
+
+    public void setRoomDetails(List<RoomDetails> roomDetails) {
+        this.roomDetails = roomDetails;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "floorNumber=" + floorNumber +
+                ", roomDetails=" + roomDetails +
+                '}';
+    }
+}
+
+class RoomDetails{
+    private Integer roomNumber;
+    private String roomTypeName;
+
+    public Integer getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(Integer roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public String getRoomTypeName() {
+        return roomTypeName;
+    }
+
+    public void setRoomTypeName(String roomTypeName) {
+        this.roomTypeName = roomTypeName;
+    }
+
+    @Override
+    public String toString() {
+        return "RoomDetails{" +
+                "roomNumber=" + roomNumber +
+                ", roomTypeName='" + roomTypeName + '\'' +
+                '}';
+    }
+}
+
+class RoomView{
+
+    public RoomView(Integer floorNumber, Integer roomNumber, String roomType){
+        this.floorNumber = floorNumber;
+        this.roomNumber = roomNumber;
+        this.roomTypeName = roomType;
+    }
+    private Integer floorNumber;
+    private Integer roomNumber;
+    private String roomTypeName;
+
+    public Integer getFloorNumber() {
+        return floorNumber;
+    }
+
+    public void setFloorNumber(Integer floorNumber) {
+        this.floorNumber = floorNumber;
+    }
+
+    public Integer getRoomNumber() {
+        return roomNumber;
+    }
+
+    public void setRoomNumber(Integer roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
+    public String getRoomTypeName() {
+        return roomTypeName;
+    }
+
+    public void setRoomTypeName(String roomTypeName) {
+        this.roomTypeName = roomTypeName;
+    }
+
+    @Override
+    public String toString() {
+        return "RoomView{" +
+                "floorNumber=" + floorNumber +
+                ", roomNumber=" + roomNumber +
+                ", roomTypeName='" + roomTypeName + '\'' +
+                '}';
     }
 }

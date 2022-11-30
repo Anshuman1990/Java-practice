@@ -106,10 +106,26 @@
 				<artifactId>nd4j-cuda-8.0-platform</artifactId>
 				<version>${nd4j.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.amazonaws</groupId>
+				<artifactId>aws-java-sdk-bom</artifactId>
+				<version>1.11.1000</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-dynamodb</artifactId>
+		</dependency>
 		<!-- ND4J backend. You need one in every DL4J project. Normally define
             artifactId as either "nd4j-native-platform" or "nd4j-cuda-7.5-platform" -->
 		<!--		<dependency>-->
@@ -290,6 +306,12 @@
 			<version>4.0.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-encryption-sdk-java</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+
 	</dependencies>
 
 
@@ -300,8 +322,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>9</source>
+					<target>9</target>
 				</configuration>
 			</plugin>
 		</plugins>

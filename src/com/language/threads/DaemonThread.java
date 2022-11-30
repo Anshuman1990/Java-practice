@@ -1,4 +1,4 @@
-package com.language.threading;
+package com.language.threads;
 
 // Java program to demonstrate the usage of
 // setDaemon() and isDaemon() method.

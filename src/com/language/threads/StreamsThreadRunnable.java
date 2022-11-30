@@ -1,4 +1,4 @@
-package com.language.threading;
+package com.language.threads;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,6 +14,7 @@ private String filePath = "";
 	public void run() {
 		System.out.println("%%%%%%%%%%%%%%%RUNNABLE%%%%%%%%%%%%%%%%%");
 	fileRead(this.filePath);
+		System.out.println("%%%%%%%%%%%%%%%RUNNABLE%%%%%%%%%%%%%%%%%");
 	}
 
 	public void fileRead(String file_name) {
