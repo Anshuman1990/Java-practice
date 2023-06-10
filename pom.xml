@@ -3,12 +3,16 @@
 		 xmlns="http://maven.apache.org/POM/4.0.0"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com</groupId>
+	<groupId>com.practice</groupId>
 	<artifactId>Java-Practice</artifactId>
 	<version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>EasyRentals</module>
+	</modules>
 
 
-	<properties>
+    <properties>
 		<!-- Change the nd4j.backend property to nd4j-cuda-7.5-platform or nd4j-cuda-8.0-platform
             to use CUDA GPUs -->
 		<nd4j.backend>nd4j-native-platform</nd4j.backend>
@@ -161,13 +165,6 @@
 			<version>${jcommon.version}</version>
 		</dependency>
 
-		<!--		&lt;!&ndash; Used for downloading data in some of the examples &ndash;&gt;-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.apache.httpcomponents</groupId>-->
-		<!--			<artifactId>httpclient</artifactId>-->
-		<!--			<version>4.3.5</version>-->
-		<!--		</dependency>-->
-
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -272,7 +269,6 @@
 		</dependency>
 
 	</dependencies>
-
 
 	<build>
 		<plugins>
