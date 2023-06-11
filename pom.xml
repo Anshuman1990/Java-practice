@@ -7,10 +7,6 @@
 	<artifactId>Java-Practice</artifactId>
 	<version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <modules>
-        <module>EasyRentals</module>
-	</modules>
-
 
     <properties>
 		<!-- Change the nd4j.backend property to nd4j-cuda-7.5-platform or nd4j-cuda-8.0-platform

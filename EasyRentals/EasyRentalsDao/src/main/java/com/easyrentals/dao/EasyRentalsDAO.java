@@ -7,7 +7,7 @@ import com.easyrentals.model.Bike;
 
 public class EasyRentalsDAO {
     public Set<Bike> getBikeDetails()  {
-        Set<Bike> set = new LinkedHashSet<Bike>();
+        Set<Bike> set = new LinkedHashSet<>();
 
         Bike bike1= new Bike();
         bike1.setBikeId(1001);
