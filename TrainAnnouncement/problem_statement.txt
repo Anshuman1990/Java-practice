@@ -1,0 +1,58 @@
+Train stations want to announce the status of trains which are yet to arrive. The data is available centrally and needs to be published to the stations.
+
+A central publisher should be publishing real time status of various trains travelling across the country. Subscribers at various junctions should consume this data and display it to the passengers. This information must be displayed only if the junction is the destination of the train.
+
+To do: Fulfill the above requirement using the Flow API.
+
+Download the partially implemented project here.
+
+The project consists of three modules:
+
+1. com.trainstatus.model
+This module is implemented. It contains the following classes:
+TrainStatus - To represent the details of running trains along with their status
+
+DataProvider - To generate the sample information of various trains and their running status
+
+
+
+
+
+2. com.trainstatus.service
+This module contains a partially implemented subscriber class to represent station subscribers. Complete the TrainStatusSubscriber class according to the description given below:
+
+
+
+
+TrainStatusSubscriber(): Implement the constructor to initialize instance variables
+
+onSubscribe(): This method should initialize the subscription reference variable and make an initial request with processingRate. Display appropriate message after subscription and first request (check sample output)
+
+onNext(): This method should process the data received from the publisher.
+
+Train status should be displayed only if the train has to arrive at this station
+
+If data processing is over according to the rate of processing, it should make another request for data
+
+If the processing limit is reached, it should call the cancel() method on subscription object
+
+onError(): Display the stack trace of the throwable object
+
+onComplete(): Display an appropriate message for finishing the publishing job of the subscriber (check sample output)
+
+
+3. com.trainstatus.ui
+This module contains the TrainStatusTester class which is partially implemented.
+
+
+
+
+It uses SubmissionPublisher to publish train information to the subscribers.
+
+Complete the main() method as follows:
+
+Subscribe the given subscriber objects ('Mysore' and 'Delhi')
+
+Retrieve all the train status data from the DataProvider
+
+Publish data to the subscribers
