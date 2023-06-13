@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>EasyRentalsModel</module>
-        <module>EasyRentalsDao</module>
+        <module>EasyRentalsDAO</module>
         <module>EasyRentalsService</module>
         <module>EasyRentalsServiceImpl</module>
         <module>EasyRentalsUi</module>

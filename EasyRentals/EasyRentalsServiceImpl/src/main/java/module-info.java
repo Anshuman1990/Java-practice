@@ -6,5 +6,5 @@ module EasyRentalsServiceImpl {
     requires EasyRentalsDao;
     requires EasyRentalsModel;
     exports com.easyrentals.service.impl;
-    provides EasyRentalsService with EasyRentalsServiceImpl;
+    provides com.easyrentals.service.EasyRentalsService with com.easyrentals.service.impl.EasyRentalsServiceImpl;
 }
