@@ -10,7 +10,7 @@
     <dependencies>
         <dependency>
             <groupId>com.easyrentals.dao</groupId>
-            <artifactId>EasyRentalsDao</artifactId>
+            <artifactId>EasyRentalsDAO</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
