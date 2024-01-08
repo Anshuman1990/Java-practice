@@ -9,3 +9,13 @@
 /Java-Practice.iml
 .classpath
 .project
+/com.trainstatus.model.iml
+/com.trainstatus.service.iml
+/com.trainstatus.ui.iml
+/EasyRentals.iml
+/EasyRentalsModel.iml
+/EasyRentalsService.iml
+/EasyRentalsServiceImpl.iml
+/EasyRentalsUi.iml
+/InfyBank.iml
+/TrainAnnouncement.iml
