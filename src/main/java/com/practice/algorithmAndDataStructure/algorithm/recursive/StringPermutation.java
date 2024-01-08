@@ -1,4 +1,4 @@
-package com.practice.recursion;
+package com.practice.algorithmAndDataStructure.algorithm.recursive;
 
 public class StringPermutation {
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.practice.algorithm.naivebayes;
+package com.practice.algorithmAndDataStructure.naivebayes;
 
 public interface Constants {
 String csv = "csv";

@@ -1,4 +1,4 @@
-package com.practice.algorithm.sorting;
+package com.practice.algorithmAndDataStructure.algorithm.sorting;
 
 public class MergeSort {
 
