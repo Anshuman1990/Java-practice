@@ -8,7 +8,9 @@ The purpose of this documentation is to track and reflect on my Java practice ac
 
 #### 1.2 Duration
 
-[Start Date] to [End Date]
+May 30, 2019 to ...
+
+
 
 ### 2. Goals
 
