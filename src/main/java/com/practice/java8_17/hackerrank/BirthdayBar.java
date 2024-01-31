@@ -1,4 +1,4 @@
-package com.practice.hackerrank;
+package  com.practice.java8_17.hackerrank;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

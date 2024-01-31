@@ -1,4 +1,4 @@
-package com.practice.database.neo4j;
+package com.practice.java8_17.database.neo4j;
 
 import org.neo4j.driver.v1.AuthTokens;
 import org.neo4j.driver.v1.Driver;

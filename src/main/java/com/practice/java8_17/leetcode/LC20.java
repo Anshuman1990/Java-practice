@@ -1,4 +1,4 @@
-package com.practice.leetcode;
+package  com.practice.java8_17.leetcode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

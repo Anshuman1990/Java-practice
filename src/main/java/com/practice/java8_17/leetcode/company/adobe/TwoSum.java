@@ -1,4 +1,4 @@
-package com.practice.leetcode.company.adobe;
+package  com.practice.java8_17.leetcode.company.adobe;
 
 public class TwoSum {
     public static void main(String[] args) {

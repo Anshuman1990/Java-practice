@@ -1,4 +1,4 @@
-package com.practice.leetcode;
+package  com.practice.java8_17.leetcode;
 //Given two strings needle and haystack, return the index of the first
 //occurrence of needle in haystack, or -1 if needle is not part of haystack.
 //

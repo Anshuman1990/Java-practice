@@ -1,6 +1,7 @@
-package modules.ui;
+package com.practice.java8_17.modules.greeting.ui;
 
-import modules.service.birthday.BirthdayGreeterService;
+
+import com.practice.java8_17.modules.greeting.service.birthday.BirthdayGreeterService;
 
 public class GreeterUI {
     public static void main(String[] args) {

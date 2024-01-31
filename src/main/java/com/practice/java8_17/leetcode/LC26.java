@@ -1,4 +1,4 @@
-package com.practice.leetcode;
+package  com.practice.java8_17.leetcode;
 
 public class LC26 {
     public static void main(String[] args) {

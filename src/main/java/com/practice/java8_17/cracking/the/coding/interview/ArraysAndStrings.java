@@ -1,4 +1,4 @@
-package com.practice.cracking.the.coding.interview;
+package com.practice.java8_17.cracking.the.coding.interview;
 
 import java.util.HashMap;
 import java.util.Map;

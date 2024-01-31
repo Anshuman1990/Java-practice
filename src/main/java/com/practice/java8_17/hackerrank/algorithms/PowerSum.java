@@ -1,4 +1,4 @@
-package com.practice.hackerrank.algorithms;
+package  com.practice.java8_17.hackerrank.algorithms;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.practice.opencv;
+package  com.practice.java8_17.opencv;
 
 import java.awt.EventQueue;
 import java.awt.Graphics;

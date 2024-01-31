@@ -1,4 +1,4 @@
-package com.practice.leetcode.blind75;
+package  com.practice.java8_17.leetcode.blind75;
 
 import java.util.ArrayList;
 import java.util.Arrays;

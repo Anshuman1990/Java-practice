@@ -1,4 +1,4 @@
-package com.practice.hackerrank.Interview_Preparation_Kit;
+package  com.practice.java8_17.hackerrank.Interview_Preparation_Kit;
 
 import java.io.BufferedWriter;
 import java.io.File;

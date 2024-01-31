@@ -1,4 +1,4 @@
-package com.practice.hackerrank.dataStructure;
+package  com.practice.java8_17.hackerrank.dataStructure;
 
 import java.util.Scanner;
 
