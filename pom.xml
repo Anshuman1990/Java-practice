@@ -9,6 +9,7 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<name>Java-Practice</name>
 	<groupId>com.practice</groupId>
 	<artifactId>java8_17</artifactId>
 	<version>1.0-SNAPSHOT</version>
@@ -44,7 +45,7 @@
 		<hadoop.version>2.2.0
 		</hadoop.version>  <!-- Hadoop version used by Spark 1.6.3 and 2.2.1 (and likely others) -->
 		<guava.version>19.0</guava.version>
-		<logback.version>1.2.9</logback.version>
+		<logback.version>1.4.12</logback.version>
 		<jfreechart.version>1.0.13</jfreechart.version>
 		<jcommon.version>1.0.23</jcommon.version>
 		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
@@ -57,6 +58,7 @@
 		<scala.plugin.version>3.2.2</scala.plugin.version>
 		<rx.java.version>3.0.0</rx.java.version>
 		<kotlin.version>1.9.0-Beta</kotlin.version>
+		<rxjava.version>3.1.6</rxjava.version>
 	</properties>
 
 	<dependencyManagement>
@@ -98,11 +100,29 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>io.reactivex.rxjava3</groupId>
 			<artifactId>rxjava</artifactId>
-			<version>3.0.4</version>
+			<version>${rx.java.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.projectreactor/reactor-core -->
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-core</artifactId>
+			<version>3.6.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-reload4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-reload4j</artifactId>
+			<version>2.0.11</version>
+			<scope>test</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-s3</artifactId>
@@ -150,12 +170,12 @@
 			<artifactId>reactive-streams</artifactId>
 			<version>1.0.2</version>
 		</dependency>
-		<dependency>
-			<groupId>org.reactivestreams</groupId>
-			<artifactId>reactive-streams-tck</artifactId>
-			<version>1.0.2</version>
-			<scope>test</scope>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.reactivestreams</groupId>-->
+<!--			<artifactId>reactive-streams-tck</artifactId>-->
+<!--			<version>1.0.2</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
