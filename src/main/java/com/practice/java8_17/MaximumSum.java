@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Solution {
+public class MaximumSum {
 
    static long maximumSum(long[] a, long m) {
 		ArrayList<Long> sum = new ArrayList<Long>();

@@ -1,6 +1,8 @@
 package com.practice.java8_17.language.streams;
 
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Consumer;
@@ -8,6 +10,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Slf4j
 public class Main {
     public static void main(String[] args) {
 
@@ -69,17 +72,19 @@ public class Main {
 
 
     public static void peek(List<Integer> list) {
-        System.out.println("--------------------------------------PEEK---------------------------------------------");
-        System.out.println(list);
+        log.info("--------------------------------------PEEK---------------------------------------------");
+//        System.out.println("--------------------------------------PEEK---------------------------------------------");
+        log.info("list Data:- ", list);
+//        System.out.println(list);
         Consumer<Integer> consumer = integer -> System.out.println(integer * 10);
 
         List<Integer> result = list.stream().peek(consumer).collect(Collectors.toList());
         System.out.println(result);
         List<String> resultString = Stream.of("one", "two", "three", "four")
                 .filter(e -> e.length() > 3)
-                .peek(e -> System.out.println("Filtered value: " + e))
+                .peek(e -> log.info("Filtered value:", e))
                 .map(String::toUpperCase)
-                .peek(e -> System.out.println("Mapped value: " + e))
+                .peek(e -> log.info("Mapped value:", e))
                 .collect(Collectors.toList());
         System.out.println(resultString);
         System.out.println("--------------------------------------PEEK---------------------------------------------");
